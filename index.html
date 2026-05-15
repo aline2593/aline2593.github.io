@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aline Réal, PhD — Postdoctoral Researcher</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blue-50: #E6F1FB;
+      --blue-200: #85B7EB;
+      --blue-600: #185FA5;
+      --blue-800: #0C447C;
+      --blue-900: #042C53;
+      --teal-50: #E1F5EE;
+      --teal-200: #5DCAA5;
+      --teal-600: #0F6E56;
+      --coral-50: #FAECE7;
+      --coral-200: #F0997B;
+      --coral-600: #993C1D;
+      --amber-100: #FAC775;
+      --amber-400: #EF9F27;
+      --gray-50: #F8F7F4;
+      --gray-100: #F1EFE8;
+      --gray-200: #D3D1C7;
+      --gray-400: #888780;
+      --gray-600: #5F5E5A;
+      --gray-900: #2C2C2A;
+      --text: #1a1a18;
+      --text-muted: #5F5E5A;
+      --text-light: #888780;
+      --border: #E2E0D8;
+      --bg: #FAFAF7;
+      --bg-card: #FFFFFF;
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 250, 247, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid var(--border);
+      padding: 0 2rem;
+    }
+    .nav-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 58px;
+    }
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--blue-600); }
+
+    /* ── Layout ── */
+    .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 5rem 0 4rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 3rem;
+      align-items: center;
+    }
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 3rem;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .hero-title {
+      font-size: 1rem;
+      color: var(--blue-600);
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.01em;
+    }
+    .hero p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 520px;
+    }
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 1.5rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 13px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 400;
+      border: 0.5px solid;
+      text-decoration: none;
+    }
+    .pill-blue { background: var(--blue-50); color: var(--blue-800); border-color: var(--blue-200); }
+    .pill-teal { background: var(--teal-50); color: var(--teal-600); border-color: var(--teal-200); }
+    .pill-coral { background: var(--coral-50); color: var(--coral-600); border-color: var(--coral-200); }
+
+    .avatar-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue-50) 0%, var(--teal-50) 100%);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Serif Display', serif;
+      font-size: 3.5rem;
+      color: var(--blue-600);
+      /* Replace background with: background: url('your-photo.jpg') center/cover; */
+    }
+    .avatar-note {
+      font-size: 11px;
+      color: var(--text-light);
+      text-align: center;
+    }
+
+    /* ── Sections ── */
+    section { padding: 3.5rem 0; border-bottom: 0.5px solid var(--border); }
+    section:last-child { border-bottom: none; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-light);
+      margin-bottom: 1.8rem;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── Research cards ── */
+    .research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .research-card {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+    }
+    .research-card-label {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+    }
+    .research-card h3 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+    .research-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+    .badge {
+      display: inline-block;
+      margin-top: 0.8rem;
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 10px;
+      background: var(--blue-50);
+      color: var(--blue-600);
+      font-weight: 500;
+    }
+
+    /* ── Publications ── */
+    .pub {
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 1.2rem;
+      padding: 1.2rem 0;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .pub:last-child { border-bottom: none; }
+    .pub-year {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--blue-600);
+      background: var(--blue-50);
+      border-radius: var(--radius-sm);
+      padding: 3px 8px;
+      height: fit-content;
+      text-align: center;
+      margin-top: 3px;
+    }
+    .pub h3 { font-size: 0.92rem; font-weight: 500; line-height: 1.5; color: var(--text); }
+    .pub-authors { font-size: 0.8rem; color: var(--text-muted); margin-top: 3px; }
+    .pub-journal { font-size: 0.8rem; color: var(--teal-600); font-weight: 500; margin-top: 4px; }
+
+    /* ── About grid ── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .about-card {
+      background: var(--gray-100);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+    }
+    .about-card h3 {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .about-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.7rem; }
+    .tag {
+      font-size: 12px;
+      padding: 3px 10px;
+      border-radius: 12px;
+      border: 0.5px solid var(--border);
+      color: var(--text-muted);
+      background: var(--bg-card);
+    }
+
+    /* ── Langoustino ── */
+    .cat-card {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1.2rem;
+      align-items: center;
+      margin-top: 14px;
+    }
+    .cat-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--amber-100), var(--coral-200));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      border: 2px solid var(--border);
+    }
+    .cat-name { font-size: 1rem; font-weight: 500; color: var(--text); }
+    .cat-sub { font-size: 0.78rem; color: var(--blue-600); font-weight: 500; margin: 3px 0 6px; }
+    .cat-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── Quote ── */
+    .quote {
+      border-left: 3px solid var(--blue-200);
+      padding: 0.8rem 1.2rem;
+      margin: 1.5rem 0;
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ── Fun facts ── */
+    .facts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .fact {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+    .fact-icon { font-size: 1.5rem; margin-bottom: 0.6rem; }
+    .fact p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── Skills ── */
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .skill-group {
+      background: var(--gray-100);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+    }
+    .skill-group h4 {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      margin-bottom: 0.6rem;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .skill-tag {
+      font-size: 12px;
+      padding: 3px 9px;
+      border-radius: 10px;
+      border: 0.5px solid var(--border);
+      color: var(--text-muted);
+      background: var(--bg-card);
+    }
+
+    /* ── Contact ── */
+    .contact-grid { display: flex; flex-direction: column; gap: 10px; }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .contact-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--teal-200);
+      flex-shrink: 0;
+    }
+    .contact-item a { color: var(--blue-600); text-decoration: none; }
+    .contact-item a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      padding: 2rem;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-light);
+      border-top: 0.5px solid var(--border);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 700px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .avatar-wrap { display: none; }
+      .research-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .facts-grid { grid-template-columns: repeat(2, 1fr); }
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="#">Aline Réal</a>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <div class="container">
+    <div class="hero">
+      <div class="hero-inner">
+        <div>
+          <h1>Aline Réal, PhD</h1>
+          <div class="hero-title">Postdoctoral Researcher · Knowles Lab · NYGC & Columbia University</div>
+          <p>Computational genomics researcher working on the genetic regulation of RNA splicing in the human brain. I grew up in the Italian Alps, trained as a scientist in Geneva, and ended up in New York — chasing big genomic questions and good pasta.</p>
+          <div class="hero-pills">
+            <a href="mailto:areal@nygenome.org" class="pill pill-blue">areal@nygenome.org</a>
+            <a href="https://github.com/aline2593" class="pill pill-teal" target="_blank">github.com/aline2593</a>
+            <span class="pill pill-coral">New York, NY</span>
+          </div>
+        </div>
+        <div class="avatar-wrap">
+          <div class="avatar">AR</div>
+          <!-- To add your photo: replace the div above with:
+               <img src="your-photo.jpg" style="width:180px;height:180px;border-radius:50%;object-fit:cover;border:2px solid var(--border);" alt="Aline Réal" /> -->
+          <span class="avatar-note">Replace with your photo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Research ── -->
+    <section id="research">
+      <div class="section-label">Research</div>
+      <h2>What I work on</h2>
+      <div class="research-grid">
+        <div class="research-card">
+          <div class="research-card-label">BigBrain</div>
+          <h3>Splicing QTL mapping in 10,000+ human brain samples</h3>
+          <p>Multi-ancestry random-effects meta-analysis across 43 tissue-cohort pairs to map genetic effects on RNA splicing.</p>
+          <span class="badge">52,696 cis-sQTLs identified</span>
+        </div>
+        <div class="research-card">
+          <div class="research-card-label">Nanopore · ONT</div>
+          <h3>Direct long-read RNA sequencing of LCLs</h3>
+          <p>Native poly(A) RNA-seq of 60 genetically diverse LCLs revealing novel transcript and m⁶A modification QTLs.</p>
+          <span class="badge">trQTLs · m⁶A-QTLs</span>
+        </div>
+        <div class="research-card">
+          <div class="research-card-label">Disease genetics</div>
+          <h3>Splicing as a mediator of neurological disease risk</h3>
+          <p>Colocalization of sQTLs with GWAS for Alzheimer's, Parkinson's, Schizophrenia and other brain disorders.</p>
+          <span class="badge">102 GWAS loci · TREM2 · BIN3</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Publications ── -->
+    <section id="publications">
+      <div class="section-label">Publications</div>
+      <h2>Selected work</h2>
+
+      <div class="pub">
+        <div class="pub-year">2025</div>
+        <div>
+          <h3>Multi-ancestry mapping of genetic effects on splicing in >10,000 human brain samples reveals novel mediators of neurological disease risk</h3>
+          <div class="pub-authors">Réal A*, Kailash BP, Dredge WH, Lamb D, Muller BZ, Jang B, Tokolyi A, Won HH, Brown B, Humphrey J, Raj T, Knowles DA</div>
+          <div class="pub-journal">In revision · medRxiv preprint available</div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-year">2024</div>
+        <div>
+          <h3>Direct long-read RNA sequencing uncovers functional variation affecting transcript production and RNA modifications</h3>
+          <div class="pub-authors">Réal A*, Brown A, Puga Yung G, Borel C, Lykoskoufis NM, Seebach JD, Dermitzakis ET, Ramisch A, Viñuela A</div>
+          <div class="pub-journal">Under review · Nature Structural & Molecular Biology</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── About ── -->
+    <section id="about">
+      <div class="section-label">About me</div>
+      <h2>Beyond the data</h2>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Origins</h3>
+          <p>I grew up in the Aosta Valley in the Italian Alps — a tiny mountain region tucked between France, Switzerland and Italy. Growing up surrounded by mountains gave me a deep love for the outdoors, a strong sense of independence, and a slightly obsessive relationship with good food. I did my PhD at the University of Geneva, then moved to New York for my postdoc — going from alpine villages to Manhattan is quite a jump, but I love it.</p>
+        </div>
+        <div class="about-card">
+          <h3>Life in New York</h3>
+          <p>New York has been a wonderful surprise. I love the energy, the food scene, and the ability to do everything on foot. Outside the lab you will find me running, doing Pilates, cycling, cooking elaborate Italian meals, or exploring a new neighborhood — currently convinced that the East Village is having a moment and I am here for it.</p>
+          <div class="tag-row">
+            <span class="tag">Running</span>
+            <span class="tag">Pilates</span>
+            <span class="tag">Cycling</span>
+            <span class="tag">Cooking</span>
+            <span class="tag">Exploring NYC</span>
+          </div>
+        </div>
+        <div class="about-card">
+          <h3>Mountains & skiing</h3>
+          <p>Growing up in the Alps means skiing is less a hobby and more a life skill. I have been on skis since before I could properly read. Going back to the mountains every winter is non-negotiable — it is where I recharge and remember that not everything has to be optimized and p-valued.</p>
+        </div>
+        <div class="about-card">
+          <h3>Handywoman</h3>
+          <p>I am the designated repair person in my family — they wait for me to come home even to change a light bulb. I genuinely enjoy fixing things, assembling furniture, and figuring out why something stopped working. It is not unlike debugging code, except the error messages are more cryptic and the tools are heavier.</p>
+        </div>
+        <div class="about-card" style="grid-column: 1 / -1;">
+          <h3>Travelling & national parks</h3>
+          <p>I love to travel and since moving to the US I have been slowly discovering American national parks — a project that is going to take a very long time and I am completely fine with that. So far: Grand Canyon, Zion, Bryce Canyon, Acadia. Next on the list: Glacier and the Pacific Northwest. Europe will always have my heart but the American landscape is on another scale entirely.</p>
+        </div>
+      </div>
+
+      <!-- Langoustino -->
+      <div class="cat-card">
+        <div class="cat-avatar">🐱</div>
+        <div>
+          <div class="cat-name">Langoustino</div>
+          <div class="cat-sub">French-Italian · Americanized · Fully in charge</div>
+          <div class="cat-desc">My cat Langoustino is a French-Italian who, like me, has been fully corrupted by New York life. He came from Geneva, survived a transatlantic move with remarkable composure, and now rules the apartment with Mediterranean authority. He is named after a crustacean, which he finds undignified but has learned to accept.</div>
+        </div>
+      </div>
+
+      <div class="quote">
+        "I think the best science happens when you stay genuinely curious — about the data, about the biology, and about the people you work with."
+      </div>
+
+      <!-- Fun facts -->
+      <div class="section-label" style="margin-top: 2rem;">Fun facts</div>
+      <div class="facts-grid">
+        <div class="fact">
+          <div class="fact-icon">⛷️</div>
+          <p>I have been skiing since before I could properly read. Growing up in the Aosta Valley leaves you no choice — it is essentially a rite of passage.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">🔧</div>
+          <p>I am the family handywoman. They call me for everything — leaky taps, furniture assembly, light bulbs. I find it genuinely satisfying.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">🏞️</div>
+          <p>On a slow but determined mission to visit every US national park. Grand Canyon, Zion, Bryce Canyon and Acadia down. Many more to go.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">🇮🇹🇫🇷🇺🇸</div>
+          <p>I speak Italian, French and English fluently — and like Langoustino, have been thoroughly Americanized despite my best efforts.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">🍝</div>
+          <p>I take pasta very seriously. Growing up in Italy makes it hard to accept substandard carbonara. Strong opinions, no apologies.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">🌆</div>
+          <p>Exploring NYC one neighborhood at a time. The East Village is going up and everyone is finally noticing — I have been saying this for months.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">🧬</div>
+          <p>I went from 60 cell lines to 10,000 brain samples — the datasets keep getting bigger and somehow I keep saying yes.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">🏃</div>
+          <p>Training for the NYC Marathon 2026 — fueled by espresso and the belief that 42km is a reasonable distance to run.</p>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="section-label" style="margin-top: 2.5rem;">Skills</div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4>Programming</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">R</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">bash</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Genomics tools</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">LeafCutter</span>
+            <span class="skill-tag">mmQTL</span>
+            <span class="skill-tag">SuSiE</span>
+            <span class="skill-tag">PLINK</span>
+            <span class="skill-tag">STAR</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Computing</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">HPC · LSF · SLURM</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Nextflow</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Wet lab</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Oxford Nanopore</span>
+            <span class="skill-tag">RNA extraction</span>
+            <span class="skill-tag">Flow cytometry</span>
+            <span class="skill-tag">Cell culture</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Languages</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Italian (native)</span>
+            <span class="skill-tag">French (native)</span>
+            <span class="skill-tag">English (fluent)</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Other</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Scientific writing</span>
+            <span class="skill-tag">Data visualization</span>
+            <span class="skill-tag">DIY & repairs</span>
+            <span class="skill-tag">Cooking</span>
+            <span class="skill-tag">Espresso</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact ── -->
+    <section id="contact">
+      <div class="section-label">Contact</div>
+      <h2>Get in touch</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-dot"></div>
+          <a href="mailto:areal@nygenome.org">areal@nygenome.org</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-dot"></div>
+          New York Genome Center, 101 Avenue of the Americas, New York, NY 10013
+        </div>
+        <div class="contact-item">
+          <div class="contact-dot"></div>
+          <a href="https://github.com/aline2593" target="_blank">github.com/aline2593</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-dot"></div>
+          <a href="https://bigbrain.nygenome.org" target="_blank">bigbrain.nygenome.org</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Aline Réal, PhD · New York Genome Center & Columbia University · 2025
+  </footer>
+
+  <script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const el = document.querySelector(a.getAttribute('href'));
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Highlight active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 100) current = s.id;
+      });
+      navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + current ? 'var(--blue-600)' : '';
+      });
+    });
+  </script>
+
+</body>
+</html>
