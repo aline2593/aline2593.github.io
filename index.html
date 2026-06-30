@@ -78,9 +78,9 @@
 
     .section-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--light); margin-bottom: 1.4rem; }
     .research-header { display: flex; align-items: flex-start; gap: 2.4rem; margin-bottom: 2rem; }
-    .research-header-right { display: flex; flex-direction: column; flex: 1; }
-    .research-header-right h2 { margin-bottom: 1.6rem; }
-    .portrait-circle { width: 200px; height: 240px; border-radius: 4px; overflow: hidden; flex-shrink: 0; border: 1px solid var(--border); margin-top: 3.8rem; }
+    .research-header-right { display: flex; flex-direction: column; flex: 1; justify-content: center; }
+    .research-bio { font-size: 0.9rem; color: var(--muted); line-height: 1.85; }
+    .portrait-circle { width: 200px; height: 240px; border-radius: 4px; overflow: hidden; flex-shrink: 0; border: 1px solid var(--border); }
     .portrait-circle img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
 
     h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; color: var(--ink); margin-bottom: 1.8rem; line-height: 1.2; letter-spacing: -0.01em; }
@@ -180,8 +180,10 @@
       <div class="research-header">
         <div class="portrait-circle"><img src="Aline.png" alt="Aline Réal" /></div>
         <div class="research-header-right">
-          <h2>What I work on</h2>
-          <div class="research-list">
+          <p class="research-bio">Computational biologist at the New York Genome Center and Columbia University, in the Knowles Lab. I work at the intersection of RNA biology and human genetics — specifically how genetic variants change the way the brain splices its transcripts, and what that tells us about Alzheimer's, Parkinson's, and Schizophrenia. I like questions that sit at the edge of what the data can actually answer, and I have a soft spot for the messy, underexplored corners of the genome that everyone else skips past.</p>
+        </div>
+      </div>
+      <div class="research-list">
         <div class="research-item">
           <div class="research-label">BigBrain · sQTL mapping</div>
           <div>
@@ -202,8 +204,6 @@
             <h3>From statistical signal to biological mechanism</h3>
             <p>Colocalization of splicing QTLs with GWAS loci for Alzheimer's, Parkinson's and Schizophrenia, trying to understand what the genome is actually doing at disease-associated variants.</p>
           </div>
-        </div>
-      </div>
         </div>
       </div>
     </section>
