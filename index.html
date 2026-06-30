@@ -61,7 +61,7 @@
       position: absolute;
       bottom: 0; left: 0; right: 0;
       background: linear-gradient(to top, rgba(20,35,55,0.75) 0%, rgba(20,35,55,0.35) 55%, transparent 100%);
-      padding: 4rem 3rem 3.5rem;
+      padding: 2rem 3rem 2rem;
       text-align: center;
     }
     .hero-text-inner { max-width: 600px; margin: 0 auto; text-align: center; }
@@ -101,7 +101,8 @@
     .about-text p + p { margin-top: 1.3rem; }
 
     .cat-card { display: flex; align-items: center; gap: 1.2rem; margin-top: 1.8rem; padding: 1.2rem 1.5rem; border: 1px solid var(--border); border-radius: 4px; background: var(--white); max-width: 560px; }
-    .cat-avatar { width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, #FAC775, #F0997B); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+    .cat-avatar { width: 62px; height: 62px; border-radius: 50%; background: linear-gradient(135deg, #FAC775, #F0997B); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; overflow: hidden; }
+    .cat-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
     .cat-name { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; color: var(--ink); }
     .cat-sub  { font-size: 0.72rem; color: var(--light); letter-spacing: 0.04em; margin: 2px 0 4px; }
     .cat-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
@@ -208,7 +209,7 @@
       </div>
 
       <div class="cat-card">
-        <div class="cat-avatar">🐱</div>
+        <div class="cat-avatar"><img src="langoustino.jpg" alt="Langoustino" /></div>
         <div>
           <div class="cat-name">Langoustino</div>
           <div class="cat-sub">French-Italian · Americanized · Fully in charge</div>
