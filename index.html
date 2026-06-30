@@ -77,6 +77,10 @@
     section:last-child { border-bottom: none; }
 
     .section-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--light); margin-bottom: 1.4rem; }
+    .research-header { display: flex; align-items: center; gap: 1.6rem; margin-bottom: 2rem; }
+    .research-header h2 { margin-bottom: 0; }
+    .portrait-circle { width: 110px; height: 110px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 2px solid var(--border); }
+    .portrait-circle img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 
     h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; color: var(--ink); margin-bottom: 1.8rem; line-height: 1.2; letter-spacing: -0.01em; }
 
@@ -173,7 +177,10 @@
 
     <section id="research">
       <div class="section-eyebrow">Research</div>
-      <h2>What I work on</h2>
+      <div class="research-header">
+        <div class="portrait-circle"><img src="Aline.png" alt="Aline Réal" /></div>
+        <h2>What I work on</h2>
+      </div>
       <div class="research-list">
         <div class="research-item">
           <div class="research-label">BigBrain · sQTL mapping</div>
